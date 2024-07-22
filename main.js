@@ -121,6 +121,7 @@ const debounce = (fn, debounceTime) => {
   };
 };
 
+// main
 const debounceTime = 400; 
 inputBox.addEventListener('input', debounce(function() {
   let input = inputBox.value.trim();
