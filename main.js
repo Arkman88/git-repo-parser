@@ -131,6 +131,8 @@ inputBox.addEventListener('input', debounce(function() {
     fetchData(input);
   } else {
     resultBox.innerHTML = '';
-    repoBox.innerHTML = '';
+    if (repoBox.querySelector('ul') && repoBox.querySelector('ul').children.length === 0) {
+      repoBox.innerHTML = '';
+    }
   }
 }, debounceTime));
